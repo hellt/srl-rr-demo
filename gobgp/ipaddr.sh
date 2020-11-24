@@ -1,0 +1,1 @@
+ip address add dev eth1 192.168.1.2/24

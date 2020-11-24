@@ -1,0 +1,51 @@
+---
+srl_nokia-interfaces:interface:
+  - name: ethernet-1/1
+    admin-state: enable
+    subinterface:
+      - index: 0
+        admin-state: enable
+        ipv4:
+          address:
+            - ip-prefix: 192.168.12.1/24
+  - name: ethernet-1/2
+    admin-state: enable
+    subinterface:
+      - index: 0
+        admin-state: enable
+        ipv4:
+          address:
+            - ip-prefix: 192.168.1.1/24
+  - name: lo0
+    admin-state: enable
+    subinterface:
+      - index: 0
+        admin-state: enable
+        ipv4:
+          address:
+            - ip-prefix: 192.0.2.1/32
+srl_nokia-network-instance:network-instance:
+  - name: default
+    interface:
+      - name: ethernet-1/1.0
+      - name: ethernet-1/2.0
+    protocols:
+      srl_nokia-bgp:bgp:
+        admin-state: enable
+        autonomous-system: 4200000000
+        router-id: 192.0.2.1
+        group:
+          - group-name: iBGPv4
+            peer-as: 4200000000
+            ipv4-unicast:
+              admin-state: enable
+        neighbor:
+          - peer-address: 192.168.1.2
+            admin-state: enable
+            peer-group: iBGPv4
+          - peer-address: 192.168.12.2
+            admin-state: enable
+            next-hop-self: true
+            peer-group: iBGPv4
+            route-reflector:
+              client: true

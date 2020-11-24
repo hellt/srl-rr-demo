@@ -1,0 +1,25 @@
+# This containerlab topo file will boot the SR Linux nodes with a default config
+# The c2 node which is a GoBGP client will not have the gobgp configuration files provided.
+# To get a complete and configured lab, use rr-lab-v2.yml
+
+name: rrdemo
+
+topology:
+  nodes:
+    rr:
+      kind: srl
+      type: ixr6
+      image: srlinux
+      license: license.key
+    c1:
+      kind: srl
+      image: srlinux
+      type: ixr6
+      license: license.key
+    c2:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+
+  links:
+    - endpoints: ["rr:e1-1", "c1:e1-1"]
+    - endpoints: ["rr:e1-2", "c2:eth1"]
