@@ -4,6 +4,15 @@
 With the following procedure we demonstrate how quick and easy it is to spin up a container-based lab which consists of two Nokia SR Linux nodes and a GoBGP container that constitutes a BGP Route-Reflection feature demonstration.
 
 ## Lab setup
+The lab will be built with three components:
+
+1. Nokia SR Linux node acting as a Route Reflector (lab node name `rr`)
+2. Nokia SR Linux node acting as a Route Reflector client (lab node name `c1`)
+3. GoBGP container acting as a route originator (lab node name `c2`)
+
+<p align="center">
+<img src="https://gitlab.com/rdodin/pics/-/wikis/uploads/7e8ef0bacc4ce6e29c0a19ba37265771/image.png" width=50%>
+</p>
 
 ### Install containerlab
 
