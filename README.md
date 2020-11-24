@@ -11,7 +11,7 @@ The lab will be built with three components:
 3. GoBGP container acting as a route originator (lab node name `c2`)
 
 <p align="center">
-<img src="https://gitlab.com/rdodin/pics/-/wikis/uploads/7e8ef0bacc4ce6e29c0a19ba37265771/image.png" width=50%>
+<img src="https://gitlab.com/rdodin/pics/-/wikis/uploads/37c03e42cbbc946fb955c885d25ee848/image.png" width=50%>
 </p>
 
 ### Install containerlab

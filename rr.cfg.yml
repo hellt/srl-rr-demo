@@ -7,7 +7,7 @@ srl_nokia-interfaces:interface:
         admin-state: enable
         ipv4:
           address:
-            - ip-prefix: 192.168.12.1/24
+            - ip-prefix: 192.168.11.1/24
   - name: ethernet-1/2
     admin-state: enable
     subinterface:
@@ -15,7 +15,7 @@ srl_nokia-interfaces:interface:
         admin-state: enable
         ipv4:
           address:
-            - ip-prefix: 192.168.1.1/24
+            - ip-prefix: 192.168.12.1/24
   - name: lo0
     admin-state: enable
     subinterface:
@@ -40,12 +40,12 @@ srl_nokia-network-instance:network-instance:
             ipv4-unicast:
               admin-state: enable
         neighbor:
-          - peer-address: 192.168.1.2
+          - peer-address: 192.168.11.2
             admin-state: enable
             peer-group: iBGPv4
+            route-reflector:
+              client: true
           - peer-address: 192.168.12.2
             admin-state: enable
             next-hop-self: true
             peer-group: iBGPv4
-            route-reflector:
-              client: true
