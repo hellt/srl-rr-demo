@@ -22,13 +22,15 @@ Installation is a breeze:
 sudo curl -sL https://get-clab.srlinux.dev | sudo bash
 ```
 
-### Get the demo file
+### Get the demo files
 
 ```
 git clone https://github.com/hellt/srl-rr-demo.git
 
 cd srl-rr-demo
 ```
+
+> Copy license.key file to the srl-rr-demo dir
 
 ### Deploy a lab
 
