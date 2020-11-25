@@ -68,3 +68,20 @@ Flags: S static, D dynamic, L discovered by LLDP, B BFD enabled, - disabled, * s
 +-------------------+----------------------------+-------------------+-------+----------+----------------+----------------+--------------+----------------------------+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
+
+## Extra
+This repo has two YAML files with SR Linux configuration snippets that can be used by `gnmic`:
+
+```bash
+gnmic -a clab-rrdemo-c1 --skip-verify \
+      -u admin -p admin \
+      set --update-path / --update-file c1.cfg.yml \
+      -e json_ietf
+
+gnmic -a clab-rrdemo-rr --skip-verify \
+      -u admin -p admin \
+      set --update-path / --update-file rr.cfg.yml \
+      -e json_ietf
+```
+
+The configuration pieces in those files configure interfaces and bgp contexts of SR Linux.
