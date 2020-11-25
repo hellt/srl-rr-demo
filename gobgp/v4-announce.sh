@@ -1,4 +1,4 @@
-self=192.168.1.2
+self=192.168.12.2
 
 # Define BGP attributes
 attr_v4="

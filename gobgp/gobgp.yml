@@ -1,10 +1,10 @@
 global:
   config:
     as: 4200000000
-    router-id: 192.168.1.2
+    router-id: 192.168.12.2
 neighbors:
   - config:
-      neighbor-address: 192.168.1.1
+      neighbor-address: 192.168.12.1
       peer-as: 4200000000
     afi-safis:
       - config:
@@ -12,7 +12,7 @@ neighbors:
       - config:
           afi-safi-name: ipv6-unicast
   - config:
-      neighbor-address: '2001::192:168:1:1'
+      neighbor-address: "2001::192:168:1:1"
       peer-as: 4200000000
     afi-safis:
       - config:
