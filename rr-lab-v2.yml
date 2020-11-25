@@ -19,7 +19,7 @@ topology:
       image: ghcr.io/hellt/network-multitool
       # mounted host directory to gobgp container
       binds:
-        - /root/rr-demo-lab/gobgp:/lab
+        - /root/srl-rr-demo/gobgp:/lab
 
   links:
     - endpoints: ["rr:e1-1", "c1:e1-1"]
